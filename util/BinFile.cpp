@@ -16,7 +16,7 @@ unsigned char *LoadBinFile(const char *fname, unsigned *size)
 	return 0;
 }
 
-bool SaveBinFile(const char *fname, const void *data, unsigned size)
+void SaveBinFile(const char *fname, const void *data, unsigned size)
 {
 	std::ofstream file(fname, std::ios::binary | std::ios::trunc);
 	file.write((const char*)data, size);
